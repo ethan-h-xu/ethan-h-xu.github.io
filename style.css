@@ -1,0 +1,26 @@
+html{
+    font-family: 'Consolas', 'Monaco', monospace;
+    background-color: #72787e;
+    color: #ffffff;
+    height: 100;
+}
+
+.container {
+    height: 100vh;
+    display:flex;
+}
+
+.main-container {
+    height: 100%;
+    width: calc(100% - 50px);
+}
+
+.side-container {
+    height: 100%;
+    width: 500px;
+}
+
+.side-item {
+    height: 50%;
+    width: 100%;
+}
