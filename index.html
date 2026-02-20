@@ -5,11 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Developer</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="main-container">
-            main
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'aboutme')" id="defaultOpen">README.md</button>
+                <button class="tablinks" onclick="openTab(event, 'projects')">Projects.js</button>
+                <button class="tablinks" onclick="openTab(event, 'experiences')">Experiences.py</button>
+            </div>
+
+            <div id="aboutme" class="tabcontent">
+                <p>My name is Ethan</p>
+            </div>
+
+            <div id="projects" class="tabcontent">
+                <p>dAIgnosis</p>
+            </div>
+
+            <div id="experiences" class="tabcontent">
+                <p>Capital One</p>
+            </div>
         </div>
         <div class="side-container">
             <div class="side-item">

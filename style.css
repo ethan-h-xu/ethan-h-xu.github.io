@@ -24,3 +24,33 @@ html{
     height: 50%;
     width: 100%;
 }
+
+
+/* Tabs */
+.tab {
+    overflow: hidden;
+    background-color: inherit;
+}
+
+.tab button {
+    background-color: inherit;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tab button:hover {
+    background-color: #373944;
+}
+
+.tab button.active {
+    background-color: #282a36;
+}
+
+.tabcontent {
+    display: none;
+    background-color: #282a36;
+}
