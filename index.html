@@ -1,41 +1,373 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethan Xu — Portfolio</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="main-container">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'aboutme')" id="defaultOpen">README.md</button>
-                <button class="tablinks" onclick="openTab(event, 'projects')">Projects.js</button>
-                <button class="tablinks" onclick="openTab(event, 'experiences')">Experiences.py</button>
-            </div>
+<div class="editor">
 
-            <div id="aboutme" class="tabcontent">
-                <p>My name is Ethan</p>
-            </div>
-
-            <div id="projects" class="tabcontent">
-                <p>dAIgnosis</p>
-            </div>
-
-            <div id="experiences" class="tabcontent">
-                <p>Capital One</p>
-            </div>
-        </div>
-        <div class="side-container">
-            <div class="side-item">
-                top
-            </div>
-            <div class="side-item">
-                bottom
-            </div>
-        </div>
+  <!-- Top toolbar -->
+  <div class="toolbar">
+    <div class="toolbar-group">
+      <span class="toolbar-btn">&#9664;&#9654;</span>
     </div>
+    <div class="toolbar-title">ethan-xu — portfolio</div>
+    <div class="toolbar-group">
+      <span class="toolbar-btn">+&#9660;</span>
+      <span class="toolbar-btn">&#9664;&#9654;</span>
+    </div>
+  </div>
+
+  <!-- Panels row -->
+  <div class="panels">
+
+    <!-- ── LEFT MAIN PANEL ── -->
+    <div class="panel main-panel">
+      <div class="tab-bar" id="main-tabs">
+        <div class="tab active" data-tab="about">about.md <span class="tab-x">×</span></div>
+        <div class="tab" data-tab="experience">experience.js <span class="tab-x">×</span></div>
+        <div class="tab" data-tab="education">education.py <span class="tab-x">×</span></div>
+        <div class="tab" data-tab="skills">skills.json <span class="tab-x">×</span></div>
+        <div class="tab" data-tab="competitions">competitions.md <span class="tab-x">×</span></div>
+        <span class="tab-spacer"></span>
+        <span class="tab-ctrl">&#9660;</span>
+      </div>
+      <div class="editor-body">
+        <div class="line-nums" id="main-ln"></div>
+        <div class="code-view">
+
+          <!-- ── ABOUT ── -->
+          <div class="tab-pane active" id="pane-about"><pre>
+<span class="cm"># ===================================================</span>
+<span class="cm">#   Ethan Xu  ·  Personal Portfolio</span>
+<span class="cm"># ===================================================</span>
+
+<span class="kw">const</span> <span class="fn">ethan</span> <span class="op">=</span> <span class="op">{</span>
+  <span class="pr">name</span><span class="op">:</span>     <span class="str">"Ethan Huateng Xu"</span><span class="op">,</span>
+  <span class="pr">title</span><span class="op">:</span>    <span class="str">"CS &amp; Math @ NYU  |  Class of 2027"</span><span class="op">,</span>
+  <span class="pr">location</span><span class="op">:</span> <span class="str">"New York, NY"</span><span class="op">,</span>
+  <span class="pr">gpa</span><span class="op">:</span>      <span class="num">3.933</span><span class="op">,</span>
+
+  <span class="pr">contact</span><span class="op">:</span> <span class="op">{</span>
+    <span class="pr">phone</span><span class="op">:</span>    <span class="str">"+1 (561) 344-6289"</span><span class="op">,</span>
+    <span class="pr">email</span><span class="op">:</span>    <span class="str">"<a href="mailto:ehx212@nyu.edu">ehx212@nyu.edu</a>"</span><span class="op">,</span>
+    <span class="pr">github</span><span class="op">:</span>   <span class="str">"<a href="https://github.com/ethan-h-xu" target="_blank">github.com/ethan-h-xu</a>"</span><span class="op">,</span>
+    <span class="pr">linkedin</span><span class="op">:</span> <span class="str">"<a href="https://www.linkedin.com/in/ethan-h-xu/" target="_blank">linkedin.com/in/ethan-h-xu</a>"</span><span class="op">,</span>
+  <span class="op">},</span>
+
+  <span class="pr">summary</span><span class="op">:</span> <span class="op">`</span>
+    <span class="tpl">Sophomore at NYU studying Computer Science &amp; Mathematics</span>
+    <span class="tpl">with a 3.933 GPA. Incoming Software Engineering Intern at</span>
+    <span class="tpl">Capital One (Summer 2026). Experienced in full-stack dev,</span>
+    <span class="tpl">ML research, and quantitative finance. Dean's List awardee</span>
+    <span class="tpl">with a passion for software at the math/CS boundary.</span>
+  <span class="op">\`</span><span class="op">,</span>
+
+  <span class="pr">interests</span><span class="op">:</span> <span class="op">[</span>
+    <span class="str">"Machine Learning"</span><span class="op">,</span>      <span class="str">"Full-Stack Development"</span><span class="op">,</span>
+    <span class="str">"Quantitative Finance"</span><span class="op">,</span>  <span class="str">"Basketball"</span><span class="op">,</span>
+    <span class="str">"Movies"</span><span class="op">,</span>               <span class="str">"Accordion"</span><span class="op">,</span>
+  <span class="op">],</span>
+<span class="op">};</span>
+</pre></div>
+
+          <!-- ── EXPERIENCE ── -->
+          <div class="tab-pane" id="pane-experience"><pre>
+<span class="cm">// ──────────────────────────────────────────────────────</span>
+<span class="cm">//  Work Experience</span>
+<span class="cm">// ──────────────────────────────────────────────────────</span>
+
+<span class="kw">const</span> <span class="fn">experience</span> <span class="op">=</span> <span class="op">[</span>
+
+  <span class="op">{</span>
+    <span class="pr">company</span><span class="op">:</span>  <span class="str">"Capital One"</span><span class="op">,</span>
+    <span class="pr">role</span><span class="op">:</span>     <span class="str">"Incoming Software Engineering Intern"</span><span class="op">,</span>
+    <span class="pr">period</span><span class="op">:</span>   <span class="str">"June 2026 – August 2026"</span><span class="op">,</span>
+    <span class="pr">location</span><span class="op">:</span> <span class="str">"McLean, VA"</span><span class="op">,</span>
+  <span class="op">},</span>
+
+  <span class="op">{</span>
+    <span class="pr">company</span><span class="op">:</span>    <span class="str">"Gladinet Inc."</span><span class="op">,</span>
+    <span class="pr">role</span><span class="op">:</span>       <span class="str">"Software Engineering Intern"</span><span class="op">,</span>
+    <span class="pr">period</span><span class="op">:</span>     <span class="str">"May 2025 – August 2025"</span><span class="op">,</span>
+    <span class="pr">location</span><span class="op">:</span>   <span class="str">"Delray Beach, FL"</span><span class="op">,</span>
+    <span class="pr">highlights</span><span class="op">:</span> <span class="op">[</span>
+      <span class="str">"Redesigned front-end UI with ReactJS (web) and .NET MAUI (mobile)"</span><span class="op">,</span>
+      <span class="str">"Managed enterprise IT: NTFS, Intune, AWS S3, Hyper-V, EC2"</span><span class="op">,</span>
+      <span class="str">"Resolved 50+ issues using Git &amp; Jira in agile workflow"</span><span class="op">,</span>
+    <span class="op">],</span>
+  <span class="op">},</span>
+
+  <span class="op">{</span>
+    <span class="pr">company</span><span class="op">:</span>    <span class="str">"NYU Stern Business Analytics Club"</span><span class="op">,</span>
+    <span class="pr">role</span><span class="op">:</span>       <span class="str">"Machine Learning Engineer"</span><span class="op">,</span>
+    <span class="pr">period</span><span class="op">:</span>     <span class="str">"October 2025 – Present"</span><span class="op">,</span>
+    <span class="pr">location</span><span class="op">:</span>   <span class="str">"New York, NY"</span><span class="op">,</span>
+    <span class="pr">highlights</span><span class="op">:</span> <span class="op">[</span>
+      <span class="str">"Fine-tuned open-source LLMs on medical datasets for underserved communities"</span><span class="op">,</span>
+      <span class="str">"Built React frontend for real-world AI healthcare application"</span><span class="op">,</span>
+    <span class="op">],</span>
+  <span class="op">},</span>
+
+  <span class="op">{</span>
+    <span class="pr">company</span><span class="op">:</span>    <span class="str">"Teuscher Lab — Portland State University"</span><span class="op">,</span>
+    <span class="pr">role</span><span class="op">:</span>       <span class="str">"Summer Researcher"</span><span class="op">,</span>
+    <span class="pr">period</span><span class="op">:</span>     <span class="str">"June 2025 – August 2025"</span><span class="op">,</span>
+    <span class="pr">location</span><span class="op">:</span>   <span class="str">"Online"</span><span class="op">,</span>
+    <span class="pr">highlights</span><span class="op">:</span> <span class="op">[</span>
+      <span class="str">"Gradient Boosting Classifier (85% acc) for political bias in news"</span><span class="op">,</span>
+      <span class="str">"Findings published in Teuscher Lab Summer Proceedings report"</span><span class="op">,</span>
+    <span class="op">],</span>
+  <span class="op">},</span>
+
+  <span class="op">{</span>
+    <span class="pr">company</span><span class="op">:</span>    <span class="str">"NYU Courant Institute of Mathematical Sciences"</span><span class="op">,</span>
+    <span class="pr">role</span><span class="op">:</span>       <span class="str">"Course Assistant"</span><span class="op">,</span>
+    <span class="pr">period</span><span class="op">:</span>     <span class="str">"August 2025 – Present"</span><span class="op">,</span>
+    <span class="pr">location</span><span class="op">:</span>   <span class="str">"New York, NY"</span><span class="op">,</span>
+    <span class="pr">highlights</span><span class="op">:</span> <span class="op">[</span>
+      <span class="str">"Supports CSO and Calculus II for 150+ students per semester"</span><span class="op">,</span>
+      <span class="str">"Reviews code in SSH/Linux environments, QAs instruction materials"</span><span class="op">,</span>
+    <span class="op">],</span>
+  <span class="op">},</span>
+
+  <span class="op">{</span>
+    <span class="pr">company</span><span class="op">:</span>    <span class="str">"NYU Stern Quantitative Finance Society"</span><span class="op">,</span>
+    <span class="pr">role</span><span class="op">:</span>       <span class="str">"Quantitative Developer"</span><span class="op">,</span>
+    <span class="pr">period</span><span class="op">:</span>     <span class="str">"October 2024 – March 2025"</span><span class="op">,</span>
+    <span class="pr">location</span><span class="op">:</span>   <span class="str">"New York, NY"</span><span class="op">,</span>
+    <span class="pr">highlights</span><span class="op">:</span> <span class="op">[</span>
+      <span class="str">"R&amp;D for equity/crypto strategies — EDA, signal design, backtesting"</span><span class="op">,</span>
+      <span class="str">"Developed expertise in matplotlib, pandas, and numpy"</span><span class="op">,</span>
+    <span class="op">],</span>
+  <span class="op">},</span>
+
+<span class="op">];</span>
+</pre></div>
+
+          <!-- ── EDUCATION ── -->
+          <div class="tab-pane" id="pane-education"><pre>
+<span class="cm"># New York University — Academic Record</span>
+
+<span class="kw">class</span> <span class="ty">NYU</span><span class="op">:</span>
+    <span class="pr">degree</span>    <span class="op">=</span> <span class="str">"B.A. Computer Science &amp; Mathematics"</span>
+    <span class="pr">grad_year</span> <span class="op">=</span> <span class="num">2027</span>
+    <span class="pr">cgpa</span>      <span class="op">=</span> <span class="num">3.933</span>
+    <span class="pr">honors</span>    <span class="op">=</span> <span class="op">[</span><span class="str">"Dean's List (2024–25)"</span><span class="op">,</span> <span class="str">"Freshman Scholars"</span><span class="op">,</span> <span class="str">"Sophomore Scholars"</span><span class="op">]</span>
+
+    <span class="cm"># ── Semester Breakdown ─────────────────────────────────────</span>
+
+    <span class="pr">semesters</span> <span class="op">=</span> <span class="op">{</span>
+
+        <span class="str">"Fall 2024"</span><span class="op">:</span> <span class="op">{</span>   <span class="cm"># GPA 3.833</span>
+            <span class="str">"Texts &amp; Ideas"</span><span class="op">:</span>        <span class="str">"B+"</span><span class="op">,</span>
+            <span class="str">"Data Structures"</span><span class="op">:</span>      <span class="str">"A"</span><span class="op">,</span>
+            <span class="str">"Writing as Inquiry"</span><span class="op">:</span>   <span class="str">"A"</span><span class="op">,</span>
+            <span class="str">"Discrete Mathematics"</span><span class="op">:</span> <span class="str">"A"</span><span class="op">,</span>
+        <span class="op">},</span>
+
+        <span class="str">"Spring 2025"</span><span class="op">:</span> <span class="op">{</span>   <span class="cm"># GPA 4.000 — Dean's List</span>
+            <span class="str">"Computer Systems Org"</span><span class="op">:</span>   <span class="str">"A"</span><span class="op">,</span>
+            <span class="str">"Basic Algorithms"</span><span class="op">:</span>       <span class="str">"A"</span><span class="op">,</span>
+            <span class="str">"Honors Linear Algebra"</span><span class="op">:</span>  <span class="str">"A"</span><span class="op">,</span>
+            <span class="str">"Crystallization in Life"</span><span class="op">:</span> <span class="str">"A"</span><span class="op">,</span>
+        <span class="op">},</span>
+
+        <span class="str">"Fall 2025"</span><span class="op">:</span> <span class="op">{</span>   <span class="cm"># GPA 3.963</span>
+            <span class="str">"Operating Systems"</span><span class="op">:</span>            <span class="str">"A"</span><span class="op">,</span>
+            <span class="str">"Intro to Microeconomics"</span><span class="op">:</span>      <span class="str">"A"</span><span class="op">,</span>
+            <span class="str">"Honors Analysis I"</span><span class="op">:</span>            <span class="str">"A"</span><span class="op">,</span>
+            <span class="str">"Honors Theory of Probability"</span><span class="op">:</span> <span class="str">"A"</span><span class="op">,</span>
+            <span class="str">"Intro to Sports Betting"</span><span class="op">:</span>      <span class="str">"A-"</span><span class="op">,</span>
+        <span class="op">},</span>
+
+        <span class="str">"Spring 2026"</span><span class="op">:</span> <span class="op">{</span>   <span class="cm"># GPA 4.000 (graded courses)</span>
+            <span class="str">"Fundamentals of Machine Learning"</span><span class="op">:</span> <span class="str">"A"</span><span class="op">,</span>
+            <span class="str">"Mathematical Statistics"</span><span class="op">:</span>          <span class="str">"A"</span><span class="op">,</span>
+            <span class="str">"Applied Internet Technology"</span><span class="op">:</span>     <span class="str">"IP"</span><span class="op">,</span>
+            <span class="str">"Cultures &amp; Contexts"</span><span class="op">:</span>            <span class="str">"IP"</span><span class="op">,</span>
+            <span class="str">"Intro to Cybersecurity"</span><span class="op">:</span>          <span class="str">"IP"</span><span class="op">,</span>
+        <span class="op">},</span>
+
+        <span class="str">"Fall 2026"</span><span class="op">:</span> <span class="op">{</span>   <span class="cm"># Enrolled</span>
+            <span class="str">"Programming Languages (Grad)"</span><span class="op">:</span>        <span class="str">"—"</span><span class="op">,</span>
+            <span class="str">"DevOps &amp; Agile Methodologies (Grad)"</span><span class="op">:</span> <span class="str">"—"</span><span class="op">,</span>
+            <span class="str">"Parallel Computing"</span><span class="op">:</span>                 <span class="str">"—"</span><span class="op">,</span>
+            <span class="str">"Honors ODE"</span><span class="op">:</span>                         <span class="str">"—"</span><span class="op">,</span>
+            <span class="str">"Honors Algebra I"</span><span class="op">:</span>                   <span class="str">"—"</span><span class="op">,</span>
+        <span class="op">},</span>
+
+    <span class="op">}</span>
+</pre></div>
+
+          <!-- ── SKILLS ── -->
+          <div class="tab-pane" id="pane-skills"><pre>
+<span class="op">{</span>
+  <span class="pr">"languages"</span><span class="op">:</span> <span class="op">[</span>
+    <span class="str">"Java"</span><span class="op">,</span> <span class="str">"Python"</span><span class="op">,</span> <span class="str">"C"</span><span class="op">,</span> <span class="str">"C++"</span><span class="op">,</span> <span class="str">"R"</span><span class="op">,</span>
+    <span class="str">"x86-64 Assembly"</span><span class="op">,</span> <span class="str">"HTML"</span><span class="op">,</span> <span class="str">"CSS"</span><span class="op">,</span> <span class="str">"JavaScript"</span>
+  <span class="op">],</span>
+
+  <span class="pr">"frameworks_and_libraries"</span><span class="op">:</span> <span class="op">[</span>
+    <span class="str">"React"</span><span class="op">,</span> <span class="str">".NET MAUI"</span><span class="op">,</span> <span class="str">"Scikit-Learn"</span><span class="op">,</span>
+    <span class="str">"pandas"</span><span class="op">,</span> <span class="str">"numpy"</span><span class="op">,</span> <span class="str">"matplotlib"</span>
+  <span class="op">],</span>
+
+  <span class="pr">"tools_and_platforms"</span><span class="op">:</span> <span class="op">[</span>
+    <span class="str">"Git"</span><span class="op">,</span> <span class="str">"Jira"</span><span class="op">,</span> <span class="str">"AWS S3"</span><span class="op">,</span> <span class="str">"Amazon EC2"</span><span class="op">,</span>
+    <span class="str">"Microsoft Intune"</span><span class="op">,</span> <span class="str">"Hyper-V"</span><span class="op">,</span> <span class="str">"Linux / SSH"</span>
+  <span class="op">],</span>
+
+  <span class="pr">"machine_learning"</span><span class="op">:</span> <span class="op">[</span>
+    <span class="str">"Gradient Boosting"</span><span class="op">,</span> <span class="str">"LLM Fine-Tuning"</span><span class="op">,</span>
+    <span class="str">"Exploratory Data Analysis"</span><span class="op">,</span> <span class="str">"Backtesting"</span><span class="op">,</span>
+    <span class="str">"Statistical Modeling"</span>
+  <span class="op">],</span>
+
+  <span class="pr">"mathematics"</span><span class="op">:</span> <span class="op">[</span>
+    <span class="str">"Linear Algebra"</span><span class="op">,</span>      <span class="str">"Probability Theory"</span><span class="op">,</span>
+    <span class="str">"Real Analysis"</span><span class="op">,</span>       <span class="str">"Mathematical Statistics"</span><span class="op">,</span>
+    <span class="str">"Discrete Mathematics"</span><span class="op">,</span> <span class="str">"Algorithms"</span>
+  <span class="op">]</span>
+<span class="op">}</span>
+</pre></div>
+
+          <!-- ── COMPETITIONS ── -->
+          <div class="tab-pane" id="pane-competitions"><pre>
+<span class="cm"># Competitions &amp; Achievements</span>
+
+<span class="kw">achievements</span> <span class="op">=</span> <span class="op">[</span>
+
+  <span class="op">{</span>
+    <span class="pr">name</span><span class="op">:</span>   <span class="str">"Harvard Undergraduate Trading Competition"</span><span class="op">,</span>
+    <span class="pr">result</span><span class="op">:</span> <span class="str">"26th Place Overall"</span><span class="op">,</span>
+    <span class="pr">year</span><span class="op">:</span>   <span class="num">2025</span><span class="op">,</span>
+  <span class="op">},</span>
+
+  <span class="op">{</span>
+    <span class="pr">name</span><span class="op">:</span>   <span class="str">"USA Computing Olympiad (USACO)"</span><span class="op">,</span>
+    <span class="pr">result</span><span class="op">:</span> <span class="str">"Silver Division; Bronze Contest Perfect Score"</span><span class="op">,</span>
+    <span class="pr">year</span><span class="op">:</span>   <span class="num">2021</span><span class="op">,</span>
+  <span class="op">},</span>
+
+  <span class="op">{</span>
+    <span class="pr">name</span><span class="op">:</span>   <span class="str">"American Invitational Math Examination (AIME)"</span><span class="op">,</span>
+    <span class="pr">result</span><span class="op">:</span> <span class="str">"Qualifier — High Score 7"</span><span class="op">,</span>
+    <span class="pr">years</span><span class="op">:</span>  <span class="str">"2021–2024"</span><span class="op">,</span>
+  <span class="op">},</span>
+
+  <span class="op">{</span>
+    <span class="pr">name</span><span class="op">:</span>   <span class="str">"Harvard-MIT Mathematics Tournament (HMMT)"</span><span class="op">,</span>
+    <span class="pr">result</span><span class="op">:</span> <span class="str">"23rd Place Team"</span><span class="op">,</span>
+    <span class="pr">year</span><span class="op">:</span>   <span class="num">2022</span><span class="op">,</span>
+  <span class="op">},</span>
+
+  <span class="op">{</span>
+    <span class="pr">name</span><span class="op">:</span>   <span class="str">"Mu Alpha Theta National Convention"</span><span class="op">,</span>
+    <span class="pr">result</span><span class="op">:</span> <span class="str">"Awards in Multiple Events"</span><span class="op">,</span>
+    <span class="pr">years</span><span class="op">:</span>  <span class="str">"2021–2024"</span><span class="op">,</span>
+  <span class="op">},</span>
+
+<span class="op">]</span>
+</pre></div>
+
+        </div><!-- /code-view -->
+      </div><!-- /editor-body -->
+    </div><!-- /main-panel -->
+
+    <!-- ── RIGHT SIDE PANELS ── -->
+    <div class="side-panels">
+
+      <!-- Top right: Contact / Stats -->
+      <div class="panel top-right-panel">
+        <div class="tab-bar">
+          <div class="tab active">contact.md</div>
+          <span class="tab-spacer"></span>
+          <span class="tab-ctrl">&#9660;</span>
+        </div>
+        <div class="editor-body">
+          <div class="line-nums" id="tr-ln"></div>
+          <div class="code-view side-view"><pre>
+<span class="cm"># — Links ————————————</span>
+
+<span class="ty">Email</span>
+  <a href="mailto:ehx212@nyu.edu" class="fn">ehx212@nyu.edu</a>
+
+<span class="ty">GitHub</span>
+  <a href="https://github.com/ethan-h-xu" target="_blank" class="fn">github.com/ethan-h-xu</a>
+
+<span class="ty">LinkedIn</span>
+  <a href="https://www.linkedin.com/in/ethan-h-xu/" target="_blank" class="fn">linkedin.com/in/ethan-h-xu</a>
+
+<span class="ty">Phone</span>
+  <span class="str">+1 (561) 344-6289</span>
+
+<span class="cm"># — Stats ————————————</span>
+
+<span class="kw">GPA</span>    <span class="num">3.933</span>
+<span class="kw">Year</span>   <span class="str">Sophomore · Class of 2027</span>
+<span class="kw">School</span> <span class="str">NYU, College of Arts &amp; Science</span>
+<span class="kw">Major</span>  <span class="str">CS &amp; Mathematics</span>
+
+<span class="cm"># — Resume ———————————</span>
+
+  <a href="Xu_Ethan_Resume.pdf" target="_blank" class="fn">&#8595; Download Resume (PDF)</a>
+</pre></div>
+        </div>
+      </div>
+
+      <!-- Bottom right: About / Currently -->
+      <div class="panel bot-right-panel">
+        <div class="tab-bar">
+          <div class="tab active">readme.txt</div>
+          <span class="tab-spacer"></span>
+          <span class="tab-ctrl">&#9660;</span>
+        </div>
+        <div class="editor-body">
+          <div class="line-nums" id="br-ln"></div>
+          <div class="code-view side-view"><pre>
+<span class="cm"># — About ————————————</span>
+
+<span class="tx">Sophomore at </span><span class="ty">NYU</span><span class="tx"> studying</span>
+<span class="fn">Computer Science &amp; Mathematics</span><span class="tx">.</span>
+<span class="tx">Passionate about ML, software</span>
+<span class="tx">engineering, and quant research.</span>
+
+<span class="cm"># — Interests ————————</span>
+
+<span class="op">→</span> <span class="tx">Basketball</span>
+<span class="op">→</span> <span class="tx">Movies</span>
+<span class="op">→</span> <span class="tx">Accordion</span>
+
+<span class="cm"># — Currently ————————</span>
+
+<span class="op">→</span> <span class="tx">Interning @</span> <span class="ty">Capital One</span>
+  <span class="tx">(SWE Intern · Summer 2026)</span>
+<span class="op">→</span> <span class="tx">Course Asst @</span> <span class="ty">NYU Courant</span>
+<span class="op">→</span> <span class="tx">ML Engineer @</span> <span class="ty">NYU Stern BAC</span>
+</pre></div>
+        </div>
+      </div>
+
+    </div><!-- /side-panels -->
+  </div><!-- /panels -->
+
+  <!-- Status bar -->
+  <div class="status-bar">
+    <span class="sb-item sb-accent">● main</span>
+    <span class="sb-item" id="sb-lang">Markdown</span>
+    <span class="sb-item">UTF-8</span>
+    <span class="sb-item">Spaces: 2</span>
+    <span class="sb-right">
+      <span class="sb-item" id="sb-pos">Ln 1, Col 1</span>
+      <span class="sb-item">NYU · CS &amp; Math · 2027</span>
+    </span>
+  </div>
+
+</div><!-- /editor -->
+<script src="script.js"></script>
 </body>
 </html>
